@@ -1,25 +1,24 @@
-﻿using System;
-
-namespace SingletonPatternExample
+﻿namespace BuilderPatternExample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Logger logger1 = Logger.GetInstance();
-            logger1.Log("First Message");
+            Computer gamingPC = new Computer.Builder()
+                .SetCPU("Intel Core i9")
+                .SetRAM(32)
+                .SetStorage(1000)
+                .SetGraphicsCard("NVIDIA RTX 4080")
+                .Build();
 
-            Logger logger2 = Logger.GetInstance();
-            logger2.Log("Second Message");
+            Computer officePC = new Computer.Builder()
+                .SetCPU("Intel Core i5")
+                .SetRAM(16)
+                .SetStorage(512)
+                .Build();
 
-            if (logger1 == logger2)
-            {
-                Console.WriteLine("Only one Logger instance exists.");
-            }
-            else
-            {
-                Console.WriteLine("Multiple Logger instances exist.");
-            }
+            gamingPC.Display();
+            officePC.Display();
         }
     }
 }

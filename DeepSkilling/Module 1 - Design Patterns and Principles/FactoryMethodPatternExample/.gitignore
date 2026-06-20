@@ -1,47 +1,22 @@
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
+bin/
+obj/
 
-# Visual Studio cache/options
 .vs/
 .vscode/
 
-# User-specific files
-*.rsuser
-*.suo
 *.user
+*.suo
 *.userosscache
 *.sln.docstates
 
-# NuGet
-*.nupkg
-*.snupkg
-*.nuget.props
-*.nuget.targets
+TestResults/
 
-# Output
-*.exe
-*.dll
-*.pdb
+*.log
 
-# OS files
-.DS_Store
-Thumbs.db
+publish/
 
-# IDE
-.idea/
-*.swp
-*.swo
-*~
+*.cache
+
+.nuget/
+
+artifacts/
